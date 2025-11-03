@@ -30,7 +30,7 @@ export default function Contact() {
                             Get in Touch
                         </h1>
                         <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto leading-relaxed">
-                            Have a project in mind? We'd love to hear about it. Reach out and let's create something amazing together.
+                            Have a project in mind? We&apos;d love to hear about it. Reach out and let&apos;s create something amazing together.
                         </p>
                     </motion.div>
                 </div>
@@ -50,7 +50,7 @@ export default function Contact() {
                         <div className="bg-gradient-to-br from-neutral-900/70 via-neutral-900/50 to-neutral-900/30 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md shadow-2xl shadow-purple-500/5">
                             <div className="mb-10 text-center">
                                 <h2 className="text-3xl md:text-4xl font-semibold mb-4 bg-gradient-to-r from-purple-300 via-lime-300 to-purple-400 bg-clip-text text-transparent">
-                                    Let's Connect
+                                    Let&apos;s Connect
                                 </h2>
                                 <p className="text-white/60 text-lg">
                                     Reach out to us through any of the following channels

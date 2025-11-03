@@ -1,6 +1,6 @@
 "use client"
 import Tag from "@/components/Tag";
-import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 const text = `You're racing to create exceptional videos, but traditional editing workflows slow you down with complex software and steep learning curves.`;

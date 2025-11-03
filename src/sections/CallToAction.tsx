@@ -8,6 +8,7 @@ export default function CallToAction() {
     useEffect(() => {
         animation.current=animate(scope.current, {x:'-50%'},{duration:30, repeat:Infinity, ease:"linear"});
         animation.current.speed=0.5;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
 useEffect(() => {
     if(animation.current) {

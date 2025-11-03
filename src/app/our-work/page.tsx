@@ -138,7 +138,7 @@ export default function OurWork() {
                             Ready to Bring Your Vision to Life?
                         </h2>
                         <p className="text-lg md:text-xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            Let's collaborate to transform your footage into compelling visual stories with professional-grade video editing and post-production.
+                            Let&apos;s collaborate to transform your footage into compelling visual stories with professional-grade video editing and post-production.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <button 
