@@ -11,7 +11,7 @@
 !.yarn/versions
 
 # testing
-/coverage
+/coverage 
 
 # next.js
 /.next/
@@ -38,3 +38,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large video files (now hosted on Cloudinary)
+# Keep videos locally for upload, but don't commit to git
+public/assets/collab/**/*.mp4
+public/assets/collab/**/*.mov
+public/assets/collab/**/*.MOV
+public/assets/collab/**/*.MP4
+public/assets/mini*vlog*/**/*.mp4
+public/assets/mini*vlog*/**/*.mov
+public/assets/montage*/**/*.mp4
+public/assets/person*to*camera*/**/*.mp4
+public/assets/ugc*/**/*.mp4
+public/assets/ugc*/**/*.mov
+public/assets/new/**/*.mp4
+public/assets/compressed/**/*.mp4
+public/assets/compressed/**/*.mov
+public/assets/compressed/**/*.MOV
+public/assets/compressed/**/*.MP4
+
+# Keep DP images (they're small)
+!public/assets/dp/**
