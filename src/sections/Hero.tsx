@@ -89,15 +89,35 @@ export default function Hero() {
                     className="whitespace-nowrap"
                     onClick={() => window.location.href = '/contact'}
                 >
-                    Start Your Project
+                    Contact Us
                 </Button>
-                <Button 
-                    variant="secondary" 
-                    className="whitespace-nowrap"
-                    onClick={() => window.location.href = '/our-work'}
-                >
-                    View Our Work
-                </Button>
+                <div className="relative whitespace-nowrap">
+                    {/* Animated gradient border */}
+                    <motion.div
+                        className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-lime-500 to-purple-500 opacity-75"
+                        animate={{
+                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                        style={{
+                            backgroundSize: '200% 100%',
+                        }}
+                    />
+                    {/* Inner button with slight inset */}
+                    <div className="relative m-[2px]">
+                        <Button 
+                            variant="secondary" 
+                            className="whitespace-nowrap bg-neutral-950 hover:bg-neutral-900 transition-colors duration-300"
+                            onClick={() => window.location.href = '/our-work'}
+                        >
+                            View Our Work
+                        </Button>
+                    </div>
+                </div>
             </motion.div>
 
             {/* Animated stats bar */}
@@ -129,9 +149,9 @@ export default function Hero() {
                             transition={{ duration: 0.5, delay: 1 }}
                         >
                             <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent mb-2">
-                                500+
+                                200M+
                             </div>
-                            <p className="text-xs md:text-sm text-white/60">Projects Completed</p>
+                            <p className="text-xs md:text-sm text-white/60">Views on Edited Posts</p>
                         </motion.div>
                         
                         <motion.div 
@@ -141,9 +161,9 @@ export default function Hero() {
                             transition={{ duration: 0.5, delay: 1.1 }}
                         >
                             <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-lime-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                                4K
+                                50+
                             </div>
-                            <p className="text-xs md:text-sm text-white/60">Ultra HD Quality</p>
+                            <p className="text-xs md:text-sm text-white/60">Brand Collaborations</p>
                         </motion.div>
                         
                         <motion.div 
@@ -153,9 +173,9 @@ export default function Hero() {
                             transition={{ duration: 0.5, delay: 1.2 }}
                         >
                             <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent mb-2">
-                                24/7
+                                4K/8K
                             </div>
-                            <p className="text-xs md:text-sm text-white/60">Cloud Access</p>
+                            <p className="text-xs md:text-sm text-white/60">Ultra HD Delivery</p>
                         </motion.div>
                         
                         <motion.div 
@@ -165,9 +185,9 @@ export default function Hero() {
                             transition={{ duration: 0.5, delay: 1.3 }}
                         >
                             <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-lime-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                                100%
+                                24Hrs
                             </div>
-                            <p className="text-xs md:text-sm text-white/60">Client Satisfaction</p>
+                            <p className="text-xs md:text-sm text-white/60">Fast Turnaround</p>
                         </motion.div>
                     </div>
                 </div>

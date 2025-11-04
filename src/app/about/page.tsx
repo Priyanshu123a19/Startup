@@ -37,17 +37,23 @@ export default function AboutPage() {
                             <div className="space-y-8">
                                 {/* Main Content */}
                                 <div className="space-y-6">
-                                    <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-                                        We're a <span className="text-lime-400 font-semibold">cloud-based video editing studio</span> that makes professional post-production simple and accessible. No complicated software, no expensive hardware—just great editing.
+                                    <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-medium">
+                                        In today&apos;s fast-paced digital world, <span className="text-lime-400 font-bold">content is king, but video is the kingdom</span>.
                                     </p>
                                     
-                                    <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-                                        Send us your footage, and we'll handle everything from <span className="text-purple-300 font-medium">editing</span> to <span className="text-purple-300 font-medium">color grading</span> and <span className="text-purple-300 font-medium">sound design</span>. You get to focus on creating content while we take care of the technical stuff.
+                                    <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+                                        At <span className="text-purple-300 font-semibold">Post Prodigies</span>, we saw a gap: Brands needed <span className="text-lime-400 font-medium">platform-specific video that actually drives conversions</span>, and influencers needed a dedicated team to handle the heavy-lifting of high-volume, high-quality editing to scale their growth.
                                     </p>
                                     
-                                    <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-                                        It's <span className="text-lime-400 font-semibold">video editing made easy</span>, so you can spend more time doing what you love.
+                                    <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+                                        Our agency was created to bridge this gap. We blend <span className="text-purple-300 font-medium">cinematic production quality</span> with <span className="text-lime-400 font-medium">social media-native strategy</span>. We don&apos;t just edit videos; we <span className="text-lime-400 font-semibold">engineer engaging content</span> that is built to perform across Instagram Reels, YouTube, LinkedIn, and beyond.
                                     </p>
+                                    
+                                    <div className="pt-6 border-t border-white/10">
+                                        <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+                                            Whether you&apos;re a <span className="text-purple-300 font-medium">brand looking to convert</span> or an <span className="text-lime-400 font-medium">influencer ready to scale</span>, we provide the professional post-production magic that transforms raw footage into compelling visual narratives.
+                                        </p>
+                                    </div>
                                 </div>
 
                                 {/* Key Features */}
@@ -60,11 +66,11 @@ export default function AboutPage() {
                                     >
                                         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500/20 to-lime-500/20 rounded-2xl flex items-center justify-center border border-purple-400/30">
                                             <svg className="w-8 h-8 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
                                             </svg>
                                         </div>
-                                        <h3 className="text-lg font-semibold text-white mb-2">Cloud-Based</h3>
-                                        <p className="text-sm text-white/60">Work from anywhere, anytime</p>
+                                        <h3 className="text-lg font-semibold text-white mb-2">Platform-Specific</h3>
+                                        <p className="text-sm text-white/60">Optimized for Instagram, YouTube, LinkedIn</p>
                                     </motion.div>
 
                                     <motion.div
@@ -75,11 +81,11 @@ export default function AboutPage() {
                                     >
                                         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500/20 to-lime-500/20 rounded-2xl flex items-center justify-center border border-purple-400/30">
                                             <svg className="w-8 h-8 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                                             </svg>
                                         </div>
-                                        <h3 className="text-lg font-semibold text-white mb-2">Skilled Editors</h3>
-                                        <p className="text-sm text-white/60">Experienced team ready to help</p>
+                                        <h3 className="text-lg font-semibold text-white mb-2">Conversion-Driven</h3>
+                                        <p className="text-sm text-white/60">Built to engage and convert viewers</p>
                                     </motion.div>
 
                                     <motion.div
@@ -90,11 +96,11 @@ export default function AboutPage() {
                                     >
                                         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500/20 to-lime-500/20 rounded-2xl flex items-center justify-center border border-purple-400/30">
                                             <svg className="w-8 h-8 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                                             </svg>
                                         </div>
-                                        <h3 className="text-lg font-semibold text-white mb-2">Complete Service</h3>
-                                        <p className="text-sm text-white/60">Everything you need in one place</p>
+                                        <h3 className="text-lg font-semibold text-white mb-2">Cinematic Quality</h3>
+                                        <p className="text-sm text-white/60">Production-grade editing & post-production</p>
                                     </motion.div>
                                 </div>
                             </div>
@@ -110,21 +116,21 @@ export default function AboutPage() {
                     >
                         <div className="text-center p-6 bg-gradient-to-br from-neutral-900/50 via-neutral-900/30 to-neutral-900/20 border border-white/10 rounded-2xl backdrop-blur-sm">
                             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent mb-2">
-                                500+
+                                200M+
                             </div>
-                            <p className="text-white/60 text-sm">Projects Delivered</p>
+                            <p className="text-white/60 text-sm">Views on Edited Content</p>
                         </div>
                         <div className="text-center p-6 bg-gradient-to-br from-neutral-900/50 via-neutral-900/30 to-neutral-900/20 border border-white/10 rounded-2xl backdrop-blur-sm">
                             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent mb-2">
-                                100%
+                                50+
                             </div>
-                            <p className="text-white/60 text-sm">Client Satisfaction</p>
+                            <p className="text-white/60 text-sm">Brand Collaborations</p>
                         </div>
                         <div className="text-center p-6 bg-gradient-to-br from-neutral-900/50 via-neutral-900/30 to-neutral-900/20 border border-white/10 rounded-2xl backdrop-blur-sm">
                             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent mb-2">
-                                24/7
+                                24Hrs
                             </div>
-                            <p className="text-white/60 text-sm">Cloud Platform</p>
+                            <p className="text-white/60 text-sm">Fast Turnaround Time</p>
                         </div>
                     </motion.div>
 
