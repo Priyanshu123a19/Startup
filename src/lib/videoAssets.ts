@@ -1,23 +1,60 @@
 /**
- * Cloudinary Video Assets Configuration
+ * Video Assets Configuration - Vercel Blob Storage
  * 
- * This file maps all video assets to their Cloudinary public IDs.
- * The structure maintains the original folder organization for easy management.
+ * This file manages video assets stored in Vercel Blob Storage.
+ * Videos are mapped by their Vercel Blob URLs for reliable, permanent free hosting.
+ * 
+ * Migration: Videos were migrated from Cloudinary to Vercel Blob Storage
+ * to avoid free tier limits and ensure permanent availability.
  */
 
-// Helper function to generate Cloudinary URL
-const getCloudinaryUrl = (publicId: string) => {
-  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-  
-  if (!cloudName) {
-    console.warn('NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is not set. Using placeholder.');
-    return `/assets/placeholder-video.mp4`; // Fallback for development
+// Video URL mapping (populated after migration)
+// Run: node scripts/migrateToVercelBlob.js to generate these URLs
+const VERCEL_BLOB_URLS: Record<string, string> = {
+  "collab/urban-needs/product-1": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/urban-needs/product-1.mp4",
+  "collab/urban-needs/product-2": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/urban-needs/product-2.mp4",
+  "collab/urban-needs/product-3": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/urban-needs/product-3.mp4",
+  "collab/burger-bae/food-1": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/burger-bae/food-1.mp4",
+  "collab/burger-bae/food-2": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/burger-bae/food-2.mp4",
+  "collab/san-kalra/lifestyle-1": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/san-kalra/lifestyle-1.mp4",
+  "collab/san-kalra/lifestyle-2": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/san-kalra/lifestyle-2.mp4",
+  "collab/san-kalra/lifestyle-3": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/san-kalra/lifestyle-3.mp4",
+  "collab/ashmita-arora/content-1": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/ashmita-arora/content-1.mp4",
+  "collab/blue-jelly-media/media-1": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/blue-jelly-media/media-1.mp4",
+  "collab/blue-jelly-media/media-2": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/blue-jelly-media/media-2.mp4",
+  "collab/blue-jelly-media/draft": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/blue-jelly-media/draft.mp4",
+  "collab/dr-chaitanya-challa/cancer-genetic": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/dr-chaitanya-challa/cancer-genetic.mp4",
+  "collab/erasavir/trial-video-compressed": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/erasavir/trial-video-compressed.mp4",
+  "collab/erasavir/ad-cta": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/erasavir/ad-cta.mp4",
+  "collab/rangaai/brand-content": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/rangaai/brand-content.mp4",
+  "collab/suhana-sethi/bmw-event-compressed": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/collab/suhana-sethi/bmw-event-compressed.mp4",
+  "our-work/mini-vlog/bmw-event-compressed": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/mini-vlog/bmw-event-compressed.mp4",
+  "our-work/mini-vlog/daily-lifestyle": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/mini-vlog/daily-lifestyle.mp4",
+  "our-work/montage/creative-compilation": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/montage/creative-compilation.mp4",
+  "our-work/person-to-camera/health-wellness": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/person-to-camera/health-wellness.mp4",
+  "our-work/person-to-camera/lifestyle-selfcare": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/person-to-camera/lifestyle-selfcare.mp4",
+  "our-work/ugc/ugc-style": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/ugc/ugc-style.mp4",
+  "our-work/ugc/cta-ad": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/ugc/cta-ad.mp4",
+  "our-work/new/creative-showcase-1": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/new/creative-showcase-1.mp4",
+  "our-work/new/creative-showcase-2": "https://hpfezxcb028xybmv.public.blob.vercel-storage.com/videos/our-work/new/creative-showcase-2.mp4",
+};
+
+// Helper function to generate video URL
+const getVideoUrlFromId = (videoId: string) => {
+  // If we have a Vercel Blob URL, use it (production)
+  if (VERCEL_BLOB_URLS[videoId]) {
+    return VERCEL_BLOB_URLS[videoId];
   }
   
-  // Add .mp4 extension for better browser compatibility
-  // Cloudinary will auto-convert MOV files to MP4 format
-  const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
-  return videoUrl;
+  // Fallback to Cloudinary during migration (temporary)
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  if (cloudName) {
+    return `https://res.cloudinary.com/${cloudName}/video/upload/${videoId}.mp4`;
+  }
+  
+  // Development fallback
+  console.warn(`No URL found for video: ${videoId}`);
+  return `/assets/placeholder-video.mp4`;
 };
 
 /**
@@ -266,10 +303,10 @@ export const videoAssets = {
 };
 
 /**
- * Helper function to get video URL from Cloudinary ID
+ * Helper function to get video URL from video ID
  */
-export const getVideoUrl = (cloudinaryId: string): string => {
-  return getCloudinaryUrl(cloudinaryId);
+export const getVideoUrl = (videoId: string): string => {
+  return getVideoUrlFromId(videoId);
 };
 
 /**
